@@ -1,0 +1,4 @@
+Program służy do automatycznego odnowienia asortymentu oraz cen w sklepie internetowym który sprzedaje części samochodowe.
+Zawiera logiczny schemat do poszukiwania najbardziej dochodowej ceny wśród przedstawionych wariantów.
+
+

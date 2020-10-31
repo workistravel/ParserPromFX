@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FinishController">
+    <children>
+        <AnchorPane prefHeight="280.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="184.0" layoutY="51.0" prefHeight="27.0" prefWidth="232.0" text="выполнение завершено">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fild" layoutX="159.0" layoutY="172.0" onAction="#setInfo" prefHeight="27.0" prefWidth="282.0" />
+            <Label layoutX="184.0" layoutY="134.0" prefHeight="27.0" prefWidth="232.0" text="результат в этой папке">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+        </AnchorPane>
+    </children>
+</Pane>
