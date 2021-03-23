@@ -194,7 +194,7 @@ import java.util.List;
                 if(answer.equalsIgnoreCase("NO VALUE")){
                     myRow.setPrice("NO PRICE");
                 }else{
-                    if(filePath.contains("ROS" ) ||filePath.contains("ZAH")){
+                    if(filePath.contains("ROS" )){
                                   priceNumeric= Double.parseDouble(answer);
                                   priceNumeric=priceNumeric/1.03;        // снижение цены для определенных прайсов
                                   answer= String.valueOf(priceNumeric);
@@ -394,12 +394,15 @@ import java.util.List;
         return str;
     }
     private String vazChecking(String code) { // проверка кода на предмет что он ВАЗ-овский
-        if (code == null || code.length()<12) {
+        if (code == null || code.length()<11) {
             return code;
         }
         String temp = "";
         if (code.contains("-")) {
             String[] mas = code.split("-");
+            if(mas.length<2){
+                return code;
+            }
             mas[1]= mas[1].replace("/", "");
             if (mas[0].length() <= 5 && mas[0].length() > 3 && mas[0].matches("\\d+") && mas[1].matches("\\d+")) {
 

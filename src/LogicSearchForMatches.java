@@ -151,79 +151,6 @@ public class LogicSearchForMatches {
 
     }
 
-
-//    private int isSetNewPrice(List<myRow> prom, int p, List<myRow> findList) {
-//        if(prom!=null) {
-//            double riceInPrice;
-//            double oldPrice = Double.parseDouble(prom.get(p).getPrice());
-//            double setPrice;
-//            LogicChangePrice lcp = new LogicChangePrice();
-//            for (int i = 0; i < findList.size(); i++) {
-//                setPrice = Double.parseDouble(lcp.logicChangePrice(findList.get(i).getPrice(), prom.get(p).getTypeAdvertising()));
-//                int pointerMoreOrLes = 0;
-//                boolean flag = false;
-//                if (oldPrice > setPrice) {
-//                    riceInPrice = ((oldPrice * 100) / setPrice) - 100;
-//                    if (riceInPrice > 30) {
-//                        flag = true;
-//                        pointerMoreOrLes = -1;
-//                    }
-//                }
-//                if (oldPrice < setPrice) {
-//                    riceInPrice = ((setPrice * 100) / oldPrice) - 100;
-//                    if (riceInPrice > 40) {
-//                        flag = true;
-//                        pointerMoreOrLes = 1;
-//
-//
-//                    }
-//                }
-//                if (!flag & pointerMoreOrLes == 0) {
-//                    if (!prom.get(p).getCompatibility().isEmpty()) {
-//                        if (prom.get(p).getCompatibility().containsKey("Producer")){
-//                            String brand = String.valueOf(prom.get(p).getCompatibility().get("Producer")); // производитель у прома
-//                            String keyWord = String.valueOf(prom.get(p).getCompatibility().get("Key word")); //слово ключ
-//                            // у прома
-//                            if(brand.equalsIgnoreCase(findList.get(i).getBrand())) {
-//                                if(keyWord.equalsIgnoreCase("none")){
-//                                    return i;
-//                                }
-//                                if(tryFindStringInName(keyWord,findList.get(i).getName())){
-//                                    return i;
-//                                }
-//
-//                            }else {
-//                                if(tryFindStringInName(brand, findList.get(i).getName())){
-//                                    return i;
-//                                }
-//                            }
-//
-//                        }
-//                    }
-//                }
-//                if (prefixChecking(prom.get(p).getCode()).equalsIgnoreCase(findList.get(i).getCode())) {
-//                    if (pointerMoreOrLes == -1) {
-//                        if (tryFoundFirstWord(prom.get(p).getName(), findList.get(i).getName())) {
-//                            MyLogger.logger(prom.get(p).getCode() + " was found cheaper more 30% in " + findList.get(i).getId() + " " + findList.get(i).getCode() + " ");
-//                            return i;
-//                        }
-//
-//
-//                    }
-//                    if (pointerMoreOrLes == 1) {
-//                        if (tryFoundFirstWord(prom.get(p).getName(), findList.get(i).getName())) {
-//                            MyLogger.logger(prom.get(p).getCode() + " became more expensive " + findList.get(i).getId() + " " + findList.get(i).getCode() + " ");
-//                            return i;
-//                        }
-//                    }
-//
-//
-//                }
-//            }
-//        }
-//     return -1;
-//    }
-
     private boolean tryFoundFirstWord(String what, String where) {
         if(what!=null  && where!=null) {
             String[] tmp = what.split(" ");
@@ -244,6 +171,7 @@ public class LogicSearchForMatches {
                     cod.startsWith("INC") ||
                     cod.startsWith("GAS") ||
                     cod.startsWith("NO") ||
+                    cod.startsWith("NON") ||
                     cod.startsWith("POL") ||
                     cod.startsWith("комплект") ||
                     cod.startsWith("VAR") ||
